@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-  <!-- Section 4: Contact Us Sectionasdsdsadsadasdasasdsdsdsdadasd -->
+  <!-- Section 4: Contact Us d -->
 
 <!DOCTYPE html>
 <html lang="en">
