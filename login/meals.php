@@ -1,10 +1,21 @@
 <?php
 session_start();
 $con = mysqli_connect("localhost", "root", "", "login");
+$query = "SELECT * FROM products WHERE id IN (8, 9, 10, 12) ORDER BY id ASC";
+$result = mysqli_query($con, $query);
+
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Display products
+    }
+}
+// Redirect to index.php if not logged in
 if (!isset($_SESSION['email'])) {
     header("Location: index.php");
     exit(); // Ensure script stops after redirection
 }
+
+// The rest of your script...
 
 if (isset($_POST["add"])) {
     if (!isset($_SESSION["cart"])) {
@@ -44,7 +55,7 @@ if (isset($_POST["add"])) {
         $_SESSION["message"] = "Item quantity updated in cart!";
     }
 
-    echo '<script>alert("'.$_SESSION["message"].'"); window.location="iced-coffee.php";</script>';
+    echo '<script>alert("'.$_SESSION["message"].'"); window.location="meals.php";</script>';
     unset($_SESSION["message"]); // Clear the message after displaying
 }
 ?>
@@ -54,7 +65,7 @@ if (isset($_POST["add"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iced Coffee</title>
+    <title>Meals</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="landingpage.css">
     <style>
@@ -211,26 +222,26 @@ if (isset($_POST["add"])) {
 </nav>
 
     <div class="header">
-        <h1>Iced Coffee</h1>
+        <h1>Meals</h1>
     </div>
     <div class="container">
         <!-- Alert for success or error message -->
         <?php if (isset($_SESSION["message"])): ?>
             <script>
                 alert("<?php echo $_SESSION["message"]; ?>");
-                window.location = "iced-coffee.php"; // Redirect after showing alert
+                window.location = "meals.php"; // Redirect after showing alert
             </script>
         <?php unset($_SESSION["message"]); endif; ?>
 
         <div class="row">
             <?php
-$query = "SELECT * FROM products WHERE id NOT IN (13, 9, 10,12,14,15,16,17) ORDER BY id ASC";
-$result = mysqli_query($con, $query);
+            $query = "SELECT * FROM products WHERE name IN ('spaghetti', 'meaty nachos','pork rice bowl',  'potato crisp') ORDER BY id ASC";
+            $result = mysqli_query($con, $query);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
             ?>
             <div class="col-md-3">
-                <form method="post" action="iced-coffee.php?action=add&id=<?php echo $row["id"]; ?>">
+                <form method="post" action="meals.php?action=add&id=<?php echo $row["id"]; ?>">
                     <div class="product">
                         <img src="images/<?php echo $row["image"]; ?>" alt="<?php echo $row["name"]; ?>">
                         <h5 class="text-info"><?php echo $row["name"]; ?></h5>

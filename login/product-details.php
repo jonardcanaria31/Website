@@ -39,7 +39,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_GET["id"]))
     <div class="left-nav">
       <ul>
         <li><a href="landingpage.php" class="nav-link active" id="homeLink">Home</a></li>
-        <li><a href="#menu" class="nav-link" id="menuLink">Menu</a></li>
+        <li><a href="landingpage.php#menu" class="nav-link" id="menuLink">Menu</a></li>
       </ul>
     </div>
 
@@ -54,8 +54,8 @@ if (isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_GET["id"]))
     <!-- Right Side Navigation -->
     <div class="right-nav">
       <ul>
-        <li><a href="#about" class="nav-link" id="aboutLink">About Us</a></li>
-        <li><a href="#contact" class="nav-link" id="contactLink">Contact</a></li>
+        <li><a href="landingpage.php#about" class="nav-link" id="aboutLink">About Us</a></li>
+        <li><a href="landingpage.php#contact" class="nav-link" id="contactLink">Contact</a></li>
         <li>
           <a href="product-details.php">
             <img src="images/shopping-cart.png" alt="Shopping Cart">

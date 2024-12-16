@@ -8,11 +8,13 @@ session_start(); // Start session
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar with Scroll Highlights</title>
 
+
     <!-- Linking CSS -->
     <link rel="stylesheet" href="landingpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landingpage.css">
 </head>
 <body>
 
@@ -78,16 +80,19 @@ session_start(); // Start session
                 </a>
 
                 <!-- Second box -->
+                <a href="meals.php">
                 <div class="flavor-item middle-box">
                     <img src="images/pasta.png" alt="Meals" class="center-pasta">
                     <p>Meals</p>
                 </div>
-
+                </a> 
                 <!-- Third box -->
+                 <a href="non-coffee.php">
                 <div class="flavor-item third-box">
                     <img src="images/matcha.webp" alt="Non-Coffee">
                     <p>Non-Coffee</p>
                 </div>
+                </a>
             </div>
         </div>
     </section>
