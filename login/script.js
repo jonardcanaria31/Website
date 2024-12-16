@@ -81,4 +81,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
-   
+   // search.js for searching 
+// Function to filter products based on the search input
+function filterProducts() {
+  // Get the search input value and convert it to lowercase
+  let input = document.getElementById('searchInput').value.toLowerCase();
+
+  // Get all product items
+  let productItems = document.getElementsByClassName('product-item');
+
+  // Loop through each product item
+  for (let i = 0; i < productItems.length; i++) {
+      // Get the product name from the h3 tag and convert to lowercase
+      let itemName = productItems[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+
+      // Check if the input is part of the item name
+      if (itemName.includes(input)) {
+          productItems[i].style.display = ''; // Show the item
+      } else {
+          productItems[i].style.display = 'none'; // Hide the item
+      }
+  }
+}
+
+        function filterProducts() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let productItems = document.getElementsByClassName('product-item');
+
+            for (let i = 0; i < productItems.length; i++) {
+                let itemName = productItems[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (itemName.indexOf(input) > -1) {
+                    productItems[i].style.display = '';
+                } else {
+                    productItems[i].style.display = 'none';
+                }
+            }
+        }

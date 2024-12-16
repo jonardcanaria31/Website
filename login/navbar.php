@@ -1,5 +1,5 @@
 <?php
-session_start();
+// No need to redefine isUserAuthenticated(), remove it from this file
 ?>
 <nav>
   <div class="left-nav">
@@ -16,13 +16,12 @@ session_start();
     <ul>
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact</a></li>
-      <li><a href="#"><img src="images/shopping-cart.png" alt="Shopping Cart" style="max-width: 20px; height: auto;"></a></li>
-      <!-- Show first name if user is logged in, otherwise show sign-in -->
-      <?php if (isset($_SESSION['email']) && isset($_SESSION['fName'])): ?>
-        <li><a href="#">Hello, <?php echo htmlspecialchars($_SESSION['fName']); ?>!</a></li> <!-- Display user's first name -->
-        <li><a href="logout.php">Logout</a></li> <!-- Link to logout -->
+      <li><a href="cart.php"><img src="images/shopping-cart.png" alt="Shopping Cart"></a></li>
+      <?php if (isset($_SESSION['user_id'])): ?>
+        <li><a href="#">Hello, <?php echo htmlspecialchars($_SESSION['fName']); ?>!</a></li>
+        <li><a href="logout.php">Logout</a></li>
       <?php else: ?>
-        <li><a href="index.php" id="signInButton">Sign In</a></li>
+        <li><a href="index.php">Sign In</a></li>
       <?php endif; ?>
     </ul>
   </div>

@@ -42,9 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = mysqli_fetch_assoc($query);
     
         if ($row) {
-            // If user is found, store the email and first name in session
+            // If user is found, store the email, first name, and user ID in session
             $_SESSION['email'] = $row['email'];
             $_SESSION['fName'] = $row['fName']; // Store the first name in session
+            $_SESSION['userID'] = $row['id']; // Store user ID in session
             
             // Output a success message directly
             echo "<script>
