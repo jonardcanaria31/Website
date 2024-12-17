@@ -6,6 +6,6 @@ session_start();
 session_destroy();
 
 // Redirect back to the landing page
-header("Location: landingpage.php");
+header("Location: index.php");
 exit();
 ?>

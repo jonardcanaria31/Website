@@ -58,7 +58,7 @@ $con->close();
     <!-- Left Side Navigation -->
     <div class="left-nav">
       <ul>
-        <li><a href="landingpage.php" class="nav-link active">Home</a></li>
+        <li><a href="index.php" class="nav-link active">Home</a></li>
         <li><a href="#menu" class="nav-link">Menu</a></li>
       </ul>
     </div>
@@ -85,7 +85,7 @@ $con->close();
           <li><a href="#">Hello, <?php echo htmlspecialchars($_SESSION['fName']); ?>!</a></li>
           <li><a href="logout.php">Logout</a></li>
         <?php else: ?>
-          <li><a href="index.php">Sign In</a></li>
+          <li><a href="login.php">Sign In</a></li>
         <?php endif; ?>
       </ul>
     </div>

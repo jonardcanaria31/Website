@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (mysqli_query($conn, $query)) {
                 // Success message and redirection after successful registration
                 echo "<script>alert('Registration Successful! Please sign in.');</script>";
-                echo "<script>window.location.href = 'index.php';</script>";
+                echo "<script>window.location.href = 'login.php';</script>";
                 exit();
             } else {
                 echo "Error: " . mysqli_error($conn);
@@ -50,13 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Output a success message directly
             echo "<script>
                     alert('Sign In Successfully!');
-                    window.location.href = 'landingpage.php'; // Redirect after alert
+                    window.location.href = 'index.php'; // Redirect after alert
                   </script>";
             exit();
         } else {
             // If sign-in fails, store error message and redirect back to login page
             $_SESSION['errorMessage'] = 'Invalid email or password.';
-            header('Location: index.php'); // Redirect to login page with error
+            header('Location: login.php'); // Redirect to login page with error
             exit();
         }
     }
