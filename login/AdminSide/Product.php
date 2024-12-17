@@ -111,9 +111,8 @@ $result = $conn->query($query);
       <li><a href="Product.php" class="active">Products</a></li>
       <li><a href="Orders.php">Orders</a></li>
       <li><a href="Customer.php">Users</a></li>
-      <li><a href="Settings.php">Settings</a></li>
       <li><a href="#">Log out</a></li>
-      <li><a href="Home.php">Go to Main Store</a></li>
+      <li><a href="../index.php">Go to Main Store</a></li>
     </ul>
   </aside>
 

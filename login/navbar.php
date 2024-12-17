@@ -4,7 +4,7 @@
 <nav>
   <div class="left-nav">
     <ul>
-      <li><a href="landingpage.php">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="menu.php">Menu</a></li>
     </ul>
   </div>
@@ -21,7 +21,7 @@
         <li><a href="#">Hello, <?php echo htmlspecialchars($_SESSION['fName']); ?>!</a></li>
         <li><a href="logout.php">Logout</a></li>
       <?php else: ?>
-        <li><a href="index.php">Sign In</a></li>
+        <li><a href="login.php">Sign In</a></li>
       <?php endif; ?>
     </ul>
   </div>

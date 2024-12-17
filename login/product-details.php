@@ -38,8 +38,8 @@ if (isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_GET["id"]))
     <!-- Left Side Navigation -->
     <div class="left-nav">
       <ul>
-        <li><a href="landingpage.php" class="nav-link active" id="homeLink">Home</a></li>
-        <li><a href="landingpage.php#menu" class="nav-link" id="menuLink">Menu</a></li>
+      <li><a href="index.php" class="nav-link active" id="homeLink">Home</a></li>
+      <li><a href="index.php#menu" class="nav-link" id="menuLink">Menu</a></li>
       </ul>
     </div>
 
@@ -54,8 +54,8 @@ if (isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_GET["id"]))
     <!-- Right Side Navigation -->
     <div class="right-nav">
       <ul>
-        <li><a href="landingpage.php#about" class="nav-link" id="aboutLink">About Us</a></li>
-        <li><a href="landingpage.php#contact" class="nav-link" id="contactLink">Contact</a></li>
+        <li><a href="index.php#about" class="nav-link" id="aboutLink">About Us</a></li>
+        <li><a href="index.php#contact" class="nav-link" id="contactLink">Contact</a></li>
         <li>
           <a href="product-details.php">
             <img src="images/shopping-cart.png" alt="Shopping Cart">
@@ -65,7 +65,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_GET["id"]))
           <li><a href="#">Hello, <?php echo htmlspecialchars($_SESSION['fName']); ?>!</a></li>
           <li><a href="logout.php">Logout</a></li>
         <?php else: ?>
-          <li><a href="index.php">Sign In</a></li>
+          <li><a href="login.php">Sign In</a></li>
         <?php endif; ?>
       </ul>
     </div>

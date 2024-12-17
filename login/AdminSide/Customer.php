@@ -72,9 +72,8 @@ $conn->close();
       <li><a href="Product.php">Products</a></li>
       <li><a href="Orders.php">Orders</a></li>
       <li><a href="Customer.php"  class="active">Users</a></li>
-      <li><a href="Settings.php">Settings</a></li>
       <li><a href="#">Log out</a></li>
-      <li><a href="Home.php">Go to Main Store</a></li>
+      <li><a href="../index.php">Go to Main Store</a></li>
     </ul>
   </aside>
 
